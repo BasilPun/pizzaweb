@@ -10,9 +10,39 @@
 <body>
     <main id = "main">
         <div id = "header">
+            <img src = "images/pizza-cartoon.jpg" alt = "a pizza cartoon guy">
             <h1> Welcome to B's Pizzaria!</h1>
             <h2>We're glad you're here :&rpar;</h2>
+            <h2>Serving GRC students for 50 years!</h2>
+            <hr>
+            <p>We make the best pizza ever. Visit us today.</p>
+            <a id = "contact-button" href = "#" role = "button">Contact us</a>
         </div>
+        <form id = "pizza-form" action = "#" method= "get">
+            <!-- Contact info -->
+            <fieldset id = "contact-info">
+                <legend>Contact Info</legend>
+                <label for = "fname">First Name:</label>
+                <input type = "text" id = "fname" name = "fname">
+
+                <label for = "lname">Last Name:</label>
+                <input type = "text" id = "lname" name = "lname">
+
+                <label for = "email">Email:</label>
+                <input type = "email" id = "email" name = "email">
+            </fieldset>
+            <fieldset id = "pickup-or-delivery">
+                <legend>Pick-up Or Delivery?</legend>
+                <input type = "radio" id = "pickup" name = "pickup" value = "pickup">
+                <label for = "pcikup">Pick-up</label>
+
+                <input type = "radio" id = "delivery" name = "delivery" value = "delivery">
+                <label for = "delivery">Delivery</label>
+            </fieldset>
+
+
+            <button type = "submit" id = "order-button">Place order</button>
+        </form>
     </main>
 </body>
 </html>

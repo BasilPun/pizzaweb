@@ -1,3 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+#header{
+    background-color: lightgray;
+    border-radius: .25rem;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+#header img{
+    height: 400px;
+}
+
+#header h1{
+    color: darkgreen;
+}
+
+#contact-button{
+    border: none;
+    background-color: darkgreen;
+    border-color: darkgreen;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1 rem;
+}
+
 body{
     background-color: darkred;
     margin: 0;
@@ -11,9 +41,10 @@ body{
     padding: 0 1rem 2rem 1rem;
 }
 
-#header{
-    background-color: lightgray;
+input[type = "text"], input[type = "email"]{
+    width: 100%;
+    border: 1px solid darkgreen;
     border-radius: .25rem;
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    margin: 0rem 0rem 1rem 0rem;
+    padding: .75rem;
 }
