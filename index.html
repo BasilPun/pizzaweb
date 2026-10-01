@@ -39,7 +39,34 @@
                 <input type = "radio" id = "delivery" name = "delivery" value = "delivery">
                 <label for = "delivery">Delivery</label>
             </fieldset>
+            <fieldset id = "pizza-toppings">
+                <legend>Pizza Toppings</legend>
+                <label for = "pepperoni">
+                    <input type = "checkbox" id = "pepperoni" name = "toppings[]" value = "peppperoni">
+                    Pepperoni
+                </label>
+                <label for = "hawaiian">
+                    <input type = "checkbox" id = "hawaiian" name = "toppings[]" value = "hawaiian">
+                    Hawaiian
+                </label>
+                <label for = "meat-lover">
+                    <input type = "checkbox" id = "meat-lover" name = "toppings[]" value = "meat-lover">
+                    Meat-Lover
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Pizza Size</legend>
+                <select id = "size" name = "size">
+                    <option value = "none"> - - Select a Size - - </option>
+                    <option value = "small">Small</option>
+                    <option value = "medium">Medium</option>
+                    <option value = "large">Large</option>
+                </select>
 
+            </fieldset>
+
+            <label for = "comment">Comments</label>
+            <textarea rows = "5" id = "comment" name = "comment"></textarea>
 
             <button type = "submit" id = "order-button">Place order</button>
         </form>

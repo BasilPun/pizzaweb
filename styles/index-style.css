@@ -3,10 +3,11 @@
 }
 
 #header{
-    background-color: lightgray;
+    background-color: grey;
     border-radius: .25rem;
     padding: 2rem 1rem;
     margin-bottom: 2rem;
+    border-radius: 1.25rem;
 }
 
 #header img{
@@ -29,7 +30,7 @@
 }
 
 body{
-    background-color: darkred;
+    background-color: #943C32;
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -41,10 +42,35 @@ body{
     padding: 0 1rem 2rem 1rem;
 }
 
-input[type = "text"], input[type = "email"]{
+fieldset{
+    border: 1px solid darkgreen;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1.25rem;
+}
+
+legend{
+    color: darkgreen;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+input[type = "text"], input[type = "email"], select, textarea{
     width: 100%;
     border: 1px solid darkgreen;
     border-radius: .25rem;
     margin: 0rem 0rem 1rem 0rem;
     padding: .75rem;
+}
+
+#pizza-toppings label{
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+textarea{
+    border-radius: 1.25rem;
+    resize: none;
 }
