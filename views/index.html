@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B's Pizzaria</title>
+    <link rel = "icon" href = "../images/pizza-favicon.png">
+    <link rel = "stylesheet" href = "../styles/index-style.css">
+    <script src = "../scripts/index-script.js" defer></script>
+</head>
+<body>
+    <main id = "main">
+        <div id = "header">
+            <img src = "../images/pizza-cartoon.jpg" alt = "a pizza cartoon guy">
+            <h1> Welcome to B's Pizzaria!</h1>
+            <h2>We're glad you're here :&rpar;</h2>
+            <h2>Serving GRC students for 50 years!</h2>
+            <hr>
+            <p>We make the best pizza ever. Visit us today.</p>
+            <a id = "contact-button" href = "#" role = "button">Contact us</a>
+        </div>
+        <form id = "pizza-form" action = "#" method= "get">
+            <!-- Contact info -->
+            <fieldset id = "contact-info">
+                <legend>Contact Info</legend>
+                
+                <label for = "fname">First Name:</label>
+                <input type = "text" id = "fname" name = "fname">
+                <span class = "err" id = "err-fname">First name is required</span>
+
+                <label for = "lname">Last Name:</label>
+                <input type = "text" id = "lname" name = "lname">
+                <span class = "err" id = "err-lname">Last name is required</span>
+
+                <label for = "email">Email:</label>
+                <input type = "email" id = "email" name = "email">
+                <span class = "err" id = "err-email">Email is required</span>
+
+            </fieldset>
+            <fieldset id = "pickup-or-delivery">
+                <legend>Pick-up Or Delivery?</legend>
+                <input type = "radio" id = "pickup" name = "pickup" value = "pickup">
+                <label for = "pcikup">Pick-up</label>
+
+                <input type = "radio" id = "delivery" name = "delivery" value = "delivery">
+                <label for = "delivery">Delivery</label>
+            </fieldset>
+            <fieldset id = "pizza-toppings">
+                <legend>Pizza Toppings</legend>
+                <label for = "pepperoni">
+                    <input type = "checkbox" id = "pepperoni" name = "toppings[]" value = "peppperoni">
+                    Pepperoni
+                </label>
+                <label for = "hawaiian">
+                    <input type = "checkbox" id = "hawaiian" name = "toppings[]" value = "hawaiian">
+                    Hawaiian
+                </label>
+                <label for = "meat-lover">
+                    <input type = "checkbox" id = "meat-lover" name = "toppings[]" value = "meat-lover">
+                    Meat-Lover
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Pizza Size</legend>
+                <select id = "size" name = "size">
+                    <option value = "none"> - - Select a Size - - </option>
+                    <option value = "small">Small</option>
+                    <option value = "medium">Medium</option>
+                    <option value = "large">Large</option>
+                </select>
+
+            </fieldset>
+
+            <label for = "comment">Comments</label>
+            <textarea rows = "5" id = "comment" name = "comment"></textarea>
+
+            <button type = "submit" id = "order-button">Place order</button>
+        </form>
+    </main>
+</body>
+</html>
