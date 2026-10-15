@@ -1,8 +1,6 @@
-
-let isValid = true;
-
 document.getElementById("pizza-form").onsubmit = () =>{
 
+    let isValid = true;
     clearErrors();
 
     let fname = document.getElementById("fname").value.trim();
