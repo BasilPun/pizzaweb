@@ -15,8 +15,6 @@ document.getElementById("pizza-form").onsubmit = () =>{
     if (lname === ""){
         document.getElementById("err-lname").style.display = "block";
         isValid = false;
-    }else{
-        document.getElementById("err-lname").style.display = "none";
     }
 
     // let email = document.getElementById("email").value.trim();
@@ -27,14 +25,37 @@ document.getElementById("pizza-form").onsubmit = () =>{
     //     document.getElementById("err-email").style.display = "none";
     // }
 
-    alert("hello");
+    // Validate method: pickup or delivery
+    let methodSelected = false;
+    let methodButtons = document.getElementsByName("method");
+    for (let i=0; i<methodButtons.length; i++) {
+        if(methodButtons[i].checked) {
+            methodSelected = true;
+        }
+    }
+
+    if (!methodSelected) {
+        document.getElementById("err-method").style.display = "block";
+        isValid = false;
+    }
+
+    // Validate pizza size
+    let sizeValue = document.getElementById("size").value;
+    if (sizeValue == "none") {
+        document.getElementById("err-size").style.display = "block";
+        isValid = false;
+
+    }
+
+    if (!isValid){
+        alert("hello have evrything on please");
+    }
     return isValid;
 };
 
 function clearErrors(){
-     document.querySelector('.err').style.display = 'none';
-    // let errors = document.getElementsByClassName("err");
-    // for (let i = 0; i< errors.length; i++){
-    //     errors[i].style.display = "none";
-    // }
+    let errors = document.getElementsByClassName("err");
+    for (let i = 0; i< errors.length; i++){
+        errors[i].style.display = "none";
+    }
 }
