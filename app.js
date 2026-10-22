@@ -44,7 +44,7 @@ app.post('/submit-order', (req, res) =>{
     //     timestamp: new Date()
     // }
     const order = req.body;
-    order['timestamp'] = new Date();
+    order.timestamp = new Date();
     orders.push(order);
      
     console.log(orders);
