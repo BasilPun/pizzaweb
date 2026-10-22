@@ -23,6 +23,10 @@ app.get('/confirm-order', (req, res) =>{
     res.sendFile(`${import.meta.dirname}/views/confirm.html`)
 });
 
+app.get('/admin', (req, res) =>{
+    res.send(orders);
+});
+
 app.get('/menu', (req, res) =>{
     res.sendFile(`${import.meta.dirname}/views/menu.html`)
 });
