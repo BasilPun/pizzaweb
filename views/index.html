@@ -1,88 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B's Pizzaria</title>
-    <link rel = "icon" href = "../images/pizza-favicon.png">
-    <link rel = "stylesheet" href = "../styles/index-style.css">
-    <script src = "../scripts/index-script.js" defer></script>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Add a Job</title>
 </head>
 <body>
-    <main id = "main">
-        <div id = "header">
-            <img src = "../images/pizza-cartoon.jpg" alt = "a pizza cartoon guy">
-            <h1> Welcome to B's Pizzaria!</h1>
-            <h2>We're glad you're here :&rpar;</h2>
-            <h2>Serving GRC students for 50 years!</h2>
-            <hr>
-            <p>We make the best pizza ever. Visit us today.</p>
-            <a id = "contact-button" href = "/contact-us" role = "button">Contact us</a>
-        </div>
-        <form id = "pizza-form" action = "/submit-order" method= "post">
-            <!-- Contact info -->
-            <fieldset id = "contact-info">
-                <legend>Contact Info</legend>
-                
-                <label for = "fname">First Name:</label>
-                <input type = "text" id = "fname" name = "fname">
-                <span class = "err" id = "err-fname">First name is required</span>
+    <main>
+        <h1>Add a Job</h1>
+        <form id = "add-job-form">
+            <div id = "job-title-box">
+                <label for = "job-title">Job Title</label>
+                <input type = "text" id = "job-title" name = "job-title">
+                <span class = "err" id = "err-job-title">Job title is required</span>
+            </div>
 
-                <label for = "lname">Last Name:</label>
-                <input type = "text" id = "lname" name = "lname">
-                <span class = "err" id = "err-lname">Last name is required</span>
+            <div id = "job-desc-box">
+                <label for = "job-desc">Job Description</label>
+                <textarea rows = "5" id = "job-desc" name = "job-desc"></textarea>
+            </div>
 
-                <label for = "email">Email:</label>
-                <input type = "email" id = "email" name = "email">
-                <span class = "err" id = "err-email">Email is required</span>
+            <div id = "compensation-box">
+                <label for = "compensation">Compensation</label>
+                <input type = "number" id = "compensation" name = "compensation">
+            </div>
 
-            </fieldset>
-            <fieldset id = "pickup-or-delivery">
-                <legend>Pick-up Or Delivery?</legend>
-                <span class="err" id="err-method">Select pickup or delivery</span>
+            <div id = "date-box">
+                <div id = "start-date-box">
+                    <label for = "start-date">Start Date</label>
+                    <input type = "date" id = "start-date" name = "start-date">
+                </div>
 
-                <label for="pickup">
-                    <input type="radio" id="pickup" name="method" value="pickup">
-                    Pickup
+                <div id = "end-date-box">
+                    <label for = "end-date">End Date</label>
+                    <input type = "date" id = "end-date" name = "end-date">
+                </div>
+            </div>
+
+            <div id = "hours-box">
+                <h2>Job Type</h2>
+                <label for = "part-time">
+                    <input type = "checkbox" id = "part-time" name = "job-type[]" value = "part-time">
+                    Part-time
                 </label>
-                
-                <label for="delivery">
-                    <input type="radio" id="delivery" name="method" value="delivery">
-                    Delivery
-                </label>
-            </fieldset>
-            <fieldset id = "pizza-toppings">
-                <legend>Pizza Toppings</legend>
-                <label for = "pepperoni">
-                    <input type = "checkbox" id = "pepperoni" name = "toppings[]" value = "peppperoni">
-                    Pepperoni
-                </label>
-                <label for = "hawaiian">
-                    <input type = "checkbox" id = "hawaiian" name = "toppings[]" value = "hawaiian">
-                    Hawaiian
-                </label>
-                <label for = "meat-lover">
-                    <input type = "checkbox" id = "meat-lover" name = "toppings[]" value = "meat-lover">
-                    Meat-Lover
-                </label>
-            </fieldset>
-            <fieldset>
-                <legend>Pizza Size</legend>
-                <span class="err" id="err-size">Select a size</span>
 
-                <select id = "size" name = "size">
-                    <option value = "none"> - - Select a Size - - </option>
-                    <option value = "small">Small</option>
-                    <option value = "medium">Medium</option>
-                    <option value = "large">Large</option>
-                </select>
+                <label for = "full-time">
+                    <input type = "checkbox" id = "full-time" name = "job-type[]" value = "full-time">
+                    Full-time
+                </label>
 
-            </fieldset>
+                <label for = "internship">
+                    <input type = "checkbox" id = "internship" name = "job-type[]" value = "internship">
+                    Internship
+                </label>
 
-            <label for = "comment">Comments</label>
-            <textarea rows = "5" id = "comment" name = "comment"></textarea>
+                <span class = "err" id = "err-job-type">Select a job type</span>
+            </div>
 
-            <button type = "submit" id = "order-button">Place order</button>
+            <div id = "location-box">
+                <label for = "job-location">Job Location</label>
+                <input type = "text" id = "job-location" name = "job-location">
+                <span class = "err" id = "err-job-location">Job location is required</span>
+            </div>
+
+            <div id = "link-box">
+                <label for = "job-link">Job Posting Link</label>
+                <input type = "url" id = "job-link" name = "job-link">
+                <span class = "err" id = "err-job-link">Enter a valid URL</span>
+            </div>
+
+            <button type = "submit" id = "add-job-button">Add Job</button>
         </form>
     </main>
 </body>
