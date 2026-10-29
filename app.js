@@ -23,12 +23,12 @@ app.get('/contact-us', (req, res) =>{
     res.render('contact')
 });
 
-app.get('/confirm-order', (req, res) =>{
-    res.render('confirm');
-});
+// app.get('/confirm-order', (req, res) =>{
+//     res.render('confirm');
+// });
 
 app.get('/admin', (req, res) =>{
-    res.send(orders);
+    res.render('admin', {orders});
 });
 
 app.get('/menu', (req, res) =>{
@@ -52,7 +52,7 @@ app.post('/submit-order', (req, res) =>{
     orders.push(order);
      
     console.log(orders);
-    res.render(confirm);
+    res.render('confirm', {order});
 });
 
 app.listen(PORT, () =>{
