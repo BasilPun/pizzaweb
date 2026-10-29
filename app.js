@@ -9,18 +9,22 @@ app.use(express.static('public'));
 //Access form data thru req.body ??
 app.use(express.urlencoded({extended: true}));
 
+//set view engine to ejs
+app.set('view engine', 'ejs');
+
 const orders = [];
 
 app.get('/', (req, res) =>{
-    res.sendFile(`${import.meta.dirname}/views/index.html`)
+    //goes into views and uses "index"
+    res.render('index');
 });
 
 app.get('/contact-us', (req, res) =>{
-    res.sendFile(`${import.meta.dirname}/views/contact.html`)
+    res.render('contact')
 });
 
 app.get('/confirm-order', (req, res) =>{
-    res.sendFile(`${import.meta.dirname}/views/confirm.html`)
+    res.render('confirm');
 });
 
 app.get('/admin', (req, res) =>{
@@ -28,7 +32,7 @@ app.get('/admin', (req, res) =>{
 });
 
 app.get('/menu', (req, res) =>{
-    res.sendFile(`${import.meta.dirname}/views/menu.html`)
+    res.render('menu');
 });
 
 app.post('/submit-order', (req, res) =>{
@@ -48,7 +52,7 @@ app.post('/submit-order', (req, res) =>{
     orders.push(order);
      
     console.log(orders);
-    res.sendFile(`${import.meta.dirname}/views/confirm.html`)
+    res.render(confirm);
 });
 
 app.listen(PORT, () =>{
